@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Описание товара — Домашняя пекарня</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">Пекарня</a>
+      <ul class="menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html" class="catalog-link">Каталог</a></li>
+        <li><button id="open-cart-btn">Корзина</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="product-detail" id="product-detail">
+      <!-- Детали товара подгрузятся через JS -->
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Домашняя пекарня</p>
+  </footer>
+
+   <div id="cart-modal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;
+    background:rgba(0,0,0,0.5);z-index:10000;justify-content:center;align-items:center;">
+    <div style="padding:20px;max-width:500px;width:90%;max-height:90vh;overflow:auto;position:relative;border-radius:8px;">
+      <button id="cart-close-btn" style="position:absolute;top:10px;right:10px;font-size:18px;">✖</button>
+      <h2>Ваша корзина</h2>
+      <div id="cart-items"></div>
+      <hr>
+      <h3>Оформить заказ</h3>
+      <form id="order-form">
+        <label>ФИО:<br><input type="text" id="order-name" required style="width:100%;"></label><br><br>
+        <label>Телефон:<br><input type="tel" id="order-phone" required style="width:100%;"></label><br><br>
+        <label>Адрес доставки:<br><textarea id="order-address" required style="width:100%;"></textarea></label><br><br>
+        <button type="submit">Заказать</button>
+      </form>
+      <div id="order-message" style="margin-top:10px;color:green;display:none;"></div>
+    </div>
+  </div>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>
